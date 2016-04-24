@@ -1,0 +1,22 @@
+buildscript {
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.11'
+    }
+}
+
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+}
+
+apply plugin: 'org.asciidoctor.convert'
+
+defaultTasks 'asciidoctor'
+
+asciidoctor {
+backends    'pdf'
+sourceDir  = new File("docs/asciidoc")
+attributes  'pdf-stylesdir': '../../../resources/themes',
+	    'pdf-fontsdir': '../../../resources/fonts',
+            'pdf-style': 'corporate',
+            'toc': 'left'
+}

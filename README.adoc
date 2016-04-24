@@ -1,0 +1,17 @@
+= Corporate Theme for Asciidoctor PDF
+
+This repository contains a theme for https://github.com/asciidoctor/asciidoctor-pdf[Asciidoctor PDF].
+The https://github.com/asciidoctor/asciidoctor-pdf/blob/master/docs/theming-guide.adoc[theming-guide] is a useful reference.
+
+== Theme
+
+The theme is contained in the `resources` directory.
+
+== Demo
+
+A demo document is contained in the `demo` directory.
+To build it, just run `./gradlew` inside `demo`.
+This requires java.
+Gradle does not need to be installed, since this project uses the wrapper.
+The output is created as `demo/build/asciidoc/pdf/lorem.pdf`.
+
